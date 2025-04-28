@@ -1,0 +1,14 @@
+
+<h2>Cadastro</h2>
+{% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endif %}
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Usuário" required>
+    <input type="password" name="password" placeholder="Senha" required>
+    <button type="submit">Cadastrar</button>
+</form>
+<a href="{% url 'login' %}">Já tenho conta</a>
