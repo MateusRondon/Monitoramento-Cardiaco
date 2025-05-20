@@ -8,7 +8,7 @@ Projeto de IoT que realiza a **leitura de batimentos cardíacos (BPM)** e **oxig
 
 - ⚙️ **ESP32**
 - 📡 Wi-Fi embutido
-- 📊 Sensor de Pulso MAX30100/30102 (simulado via `random()` neste protótipo)
+- 📊 Sensor de Pulso MAX30100/30102 ( Coletando dados neste protótipo)
 - 🌐 Interface Web com HTML, CSS e JavaScript
 - 📦 Servidor Web interno via `WebServer.h`
 
