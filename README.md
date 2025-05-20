@@ -33,9 +33,3 @@ flowchart TD
     K --> L
     L --> M[Responde rota /bpm com JSON]
     
---
-    ## 👨‍💻 Autor
-
-    **Mateus Rondon**  
-    Estudante de Engenharia da Computação no IFMT  
-    
