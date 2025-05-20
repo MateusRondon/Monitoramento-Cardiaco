@@ -18,6 +18,7 @@ Projeto de IoT que realiza a **leitura de batimentos cardíacos (BPM)** e **oxig
 
 ```mermaid
 flowchart TD
+  
     A[Início do Setup] --> B[Inicializa Serial e Wi-Fi]
     B --> C[Conecta ao Wi-Fi]
     C --> D[Inicia o Servidor Web]
@@ -27,10 +28,13 @@ flowchart TD
     F --> G{Leitura do Sensor < 50?}
     G -- Não --> H[Zera BPM, SpO2 e tempo]
     G -- Sim --> I[Marca dedo presente / Atualiza tempo]
-    I -- Não --> I[Loop]
-    I --> J[Coleta Dados BPM entre 60-100]
-    J --> K[Coleta Dados SpO2 entre 90-100%]
-    H --> L[Exibe no Serial Monitor]
-    K --> L
-    L --> M[Responde rota /bpm com JSON]
-    L --> N[Responde rota /spo2 com JSON]
+    I --> J{Dedo presente?}
+    J -- Não --> I[Loop até encontrar dedo]
+    J -- Sim --> K[Coleta Dados BPM entre 60-100]
+    K --> L[Coleta Dados SpO2 entre 90-100%]
+    H --> M[Exibe no Serial Monitor]
+    L --> M
+    M --> N[Responde rota /bpm com JSON]
+    M --> O[Responde rota /spo2 com JSON]
+
+
