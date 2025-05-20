@@ -32,3 +32,10 @@ flowchart TD
     H --> L[Exibe no Serial Monitor]
     K --> L
     L --> M[Responde rota /bpm com JSON]
+    
+--
+    ## 👨‍💻 Autor
+
+    **Mateus Rondon**  
+    Estudante de Engenharia da Computação no IFMT  
+    🔗 [GitHub](https://github.com/MateusRondon) | 💻 Dev Full-Stack
