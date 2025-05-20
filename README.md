@@ -28,9 +28,9 @@ flowchart TD
     G -- Não --> H[Zera BPM, SpO2 e tempo]
     G -- Sim --> I[Marca dedo presente / Atualiza tempo]
     I -- Não --> I[Loop]
-    I --> J[Coleta Dados BPM  entre 60-100]
-    J --> K[Coleta Dados SpO2  entre 90-100%]
+    I --> J[Coleta Dados BPM entre 60-100]
+    J --> K[Coleta Dados SpO2 entre 90-100%]
     H --> L[Exibe no Serial Monitor]
     K --> L
     L --> M[Responde rota /bpm com JSON]
-    
+    L --> N[Responde rota /spo2 com JSON]
