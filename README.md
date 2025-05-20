@@ -25,8 +25,9 @@ flowchart TD
     E --> F[Loop Principal]
 
     F --> G{Leitura do Sensor < 50?}
-    G -- Sim --> H[Zera BPM, SpO2 e tempo]
-    G -- Não --> I[Marca dedo presente / Atualiza tempo]
+    G -- Não --> H[Zera BPM, SpO2 e tempo]
+    G -- Sim --> I[Marca dedo presente / Atualiza tempo]
+    I --> Não--> I[Loop]
     I --> J[Coleta Dados BPM  entre 60-100]
     J --> K[Coleta Dados SpO2  entre 90-100%]
     H --> L[Exibe no Serial Monitor]
