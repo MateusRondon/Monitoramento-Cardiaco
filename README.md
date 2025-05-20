@@ -12,8 +12,8 @@ flowchart TD
     F --> G{Leitura do Sensor < 50?}
     G -- Sim --> H[Zera BPM, SpO2 e tempo]
     G -- Não --> I[Marca dedo presente / Atualiza tempo]
-    I --> J[Gera BPM aleatório entre 60-100]
-    J --> K[Gera SpO2 aleatório entre 90-100%]
+    I --> J[Coleta Dados BPM  entre 60-100]
+    J --> K[Coleta Dados SpO2  entre 90-100%]
     H --> L[Exibe no Serial Monitor]
     K --> L
     L --> M[Responde rota /bpm com JSON]
