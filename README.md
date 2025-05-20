@@ -36,7 +36,7 @@ flowchart TD
     L --> M
     M --> N[Responde rota /bpm com JSON]
     M --> O[Responde rota /spo2 com JSON]
-    M --> P[Exibe dados na interface Web (site)]
+    M --> P[Exibe dados na interface Web site]
     P --> Q[Envia dados para o Firebase]
     Q --> R[Confirmação de envio no console]
 
