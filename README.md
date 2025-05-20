@@ -38,4 +38,5 @@ flowchart TD
 
     **Mateus Rondon**  
     Estudante de Engenharia da Computação no IFMT  
-    🔗 [GitHub](https://github.com/MateusRondon) | 💻 Dev Full-Stack
+    🔗 [GitHub](https://github.com/MateusRondon) 
+    | 💻 Dev Full-Stack
