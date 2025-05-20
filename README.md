@@ -1,5 +1,20 @@
-# Monitoramento-Cardiaco
-# Monitoramento de Batimentos e Oxigenação com ESP32
+# 💓 Monitoramento Cardíaco com ESP32
+
+Projeto de IoT que realiza a **leitura de batimentos cardíacos (BPM)** e **oxigenação sanguínea (SpO2)** utilizando um ESP32 com sensor MAX30100/30102, exibindo os dados via **interface web responsiva**.
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+- ⚙️ **ESP32**
+- 📡 Wi-Fi embutido
+- 📊 Sensor de Pulso MAX30100/30102 (simulado via `random()` neste protótipo)
+- 🌐 Interface Web com HTML, CSS e JavaScript
+- 📦 Servidor Web interno via `WebServer.h`
+
+---
+
+## 🔁 Fluxo de Funcionamento
 
 ```mermaid
 flowchart TD
@@ -17,12 +32,3 @@ flowchart TD
     H --> L[Exibe no Serial Monitor]
     K --> L
     L --> M[Responde rota /bpm com JSON]
-
-    click A href "#" "Setup"
-    click F href "#" "Loop"
-    click M href "#" "/bpm"
-
-
-
-
-
