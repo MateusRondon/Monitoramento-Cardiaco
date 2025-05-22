@@ -17,7 +17,7 @@ Projeto de IoT que realiza a **leitura de batimentos cardíacos (BPM)** e **oxig
 
 ---
 # 👀 Visão do produto
-    *Para pessoas que necessitam de monitoramento constante da saúde cardiovascular, **o SystemBPM (Sistema de Batimento Cardíaco) é uma API destinada ao acompanhamento de ritmos cardíacos, **que melhora a conscientização dos pacientes sobre sua saúde, auxiliando no monitoramento dos batimentos cardíacos e possibilitando atendimentos futuros.**Ao contrário dos métodos convencionais, como as consultas presenciais em clínicas, esse produto facilita o atendimento de forma remota, tornando a coleta de dados mais ágil e eficiente.
+    -Para pessoas que necessitam de monitoramento constante da saúde cardiovascular, o SystemBPM (Sistema de Batimento Cardíaco) é uma API destinada ao acompanhamento de ritmos cardíacos, **que melhora a conscientização dos pacientes sobre sua saúde, auxiliando no monitoramento dos batimentos cardíacos e possibilitando atendimentos futuros.-Ao contrário dos métodos convencionais, como as consultas presenciais em clínicas, esse produto facilita o atendimento de forma remota, tornando a coleta de dados mais ágil e eficiente.
 
      
 ---
