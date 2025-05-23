@@ -1,4 +1,6 @@
-home, como_funciona, contato, comprou
+###Comportamento - Relacional
+---
+**home**, **como_funciona**, **contato**, **Classificao**
 1,1,0,0
 1,1,0,0
 1,1,0,0
