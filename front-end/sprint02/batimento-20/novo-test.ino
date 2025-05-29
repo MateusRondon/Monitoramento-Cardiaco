@@ -27,12 +27,6 @@ void setup() {
   }
   Serial.println("\nWi-Fi conectado!");
   Serial.println(WiFi.localIP());
-
-  // Inicializar sensor MAX30102
-  // if (!sensor.begin(Wire, I2C_SPEED_STANDARD)) {
-  //   Serial.println("Sensor MAX30102 não encontrado!");
-  //   while (1);
-  // }
   sensor.setup(); // configuração padrão
   sensor.setPulseAmplitudeRed(0x0A);
   sensor.setPulseAmplitudeGreen(0); // Desativa LED verde
