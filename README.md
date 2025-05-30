@@ -1,4 +1,4 @@
-# 💓 Monitoramento Cardíaco com ESP32
+#  Monitoramento Cardíaco com ESP32
 ## Monitor de Batimentos Cardíacos ❤️
 
 ![Batimentos](assets/batimento-0.2.png)
