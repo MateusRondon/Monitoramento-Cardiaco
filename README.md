@@ -1,7 +1,7 @@
 #  Monitoramento Cardíaco com ESP32
 ## Monitor de Batimentos Cardíacos ❤️
 
-![Batimentos](assets/batimento-0.2.png)
+![Batimentos](src/assets/batimento-0.2.png)
 
 Projeto de IoT que realiza a **leitura de batimentos cardíacos (BPM)** e **oxigenação sanguínea (SpO2)** utilizando um ESP32 com sensor MAX30100/30102, exibindo os dados via **interface web responsiva**.
 
