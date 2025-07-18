@@ -24,7 +24,7 @@ Projeto de IoT que realiza a **leitura de batimentos cardíacos (BPM)** e **oxig
 Mateus @MateusRondon
 ---
 ## Artigo Do Projeto
-Link --> [Artigo Sobre Batimento Cardiaco](Artigo_Projeto/Mateus.pdf)
+[Artigo Sobre Batimento Cardiaco](Artigo_Projeto/Mateus.pdf)
 
 
 ---
