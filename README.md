@@ -98,6 +98,39 @@ npm run dev
 A aplicação estará disponível localmente (porta definida pelo Vite).
 
 ---
+# 💓 Monitoramento Cardíaco com ESP32 e Blynk IoT
+
+## 📱 Descrição do Projeto
+
+Sistema de monitoramento contínuo de batimentos cardíacos e oxigenação (SpO2) utilizando:
+- **Sensor:** MAX30100
+- **Microcontrolador:** ESP32
+- **Plataforma IoT:** Blynk
+- **Banco de Dados:** Firebase/MySQL
+- **Visualização:** Dashboard web e mobile
+
+## ✨ Funcionalidades Principais
+
+- ✅ Leitura em tempo real de batimentos cardíacos (BPM)
+- ✅ Monitoramento de oxigenação (SpO2)
+- ✅ Alertas personalizados (fora da faixa saudável)
+- ✅ Dashboard Blynk com gráficos
+- ✅ Histórico de dados em banco de dados
+- ✅ Comparação entre múltiplos sensores
+- ✅ Notificações via SMS, email ou push
+
+## 🛠️ Tecnologias
+
+| Componente | Tecnologia |
+|-----------|-----------|
+| Microcontrolador | ESP32 |
+| Sensor | MAX30100 |
+| Plataforma IoT | Blynk IoT |
+| Linguagem | C++ (Arduino) |
+| Banco de Dados | Firebase/MySQL |
+| Comunicação | WiFi, MQTT |
+
+## 📦 Estrutura do Projeto
 
 
 ## 🔄 Fluxo de Funcionamento
