@@ -1,0 +1,72 @@
+# Compiled files
+*.o
+*.a
+*.so
+*.out
+*.elf
+*.hex
+
+# Build directories
+build/
+dist/
+*.build/
+.pio/
+
+# Arduino IDE
+*.ino
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependencies
+node_modules/
+.npm
+.node-gyp
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Credentials & Secrets
+.env
+.env.local
+secrets.h
+config_private.h
+credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Test coverage
+coverage/
+*.gcov
+*.gcda
+*.gcno
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.bak
+*.~
+
+# Arduino build cache
+arduino_cache/
+build_cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
