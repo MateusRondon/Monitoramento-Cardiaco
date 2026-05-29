@@ -1,103 +1,141 @@
-# 🗂️ ESTRUTURA REORGANIZADA DO PROJETO
+# 📋 Estrutura Reorganizada - Monitoramento Cardíaco
 
-## 📊 Visão Geral da Organização
+## 🗂️ Organização do Repositório
+
+Este documento descreve a estrutura profissional e otimizada do projeto para facilitar navegação, desenvolvimento e deploy.
+
+---
+
+## 📊 Visão Geral da Organização (Ordem de Prioridade)
 
 ```
 Monitoramento-Cardiaco/
 │
-├── 📄 README.md                    # Documentação principal
-├── 🗂️ STRUCTURE.md                 # Este mapa de estrutura
-├── 📝 .gitignore                   # Git ignore rules
+├── 📄 README.md                    # ⭐ DOCUMENTAÇÃO PRINCIPAL - COMECE AQUI
+├── 🗂️ STRUCTURE.md                 # ⭐ MAPA DE ESTRUTURA
+├── 📝 .gitignore                   # Git configuração
 ├── 🔧 init.sh                      # Script de inicialização
 │
-├── 💻 src/                         # 🔴 CÓDIGO-FONTE (Core do projeto)
+├── 💻 src/                         # 🔴 CÓDIGO-FONTE (PRIORIDADE 1 - DEPLOY)
 │   ├── 📄 README.md                # Descrição dos arquivos
-│   ├── main.cpp                    # Arquivo principal
+│   ├── main.cpp                    # Arquivo principal ESP32
 │   ├── sensor_reader.h             # Leitor do sensor MAX30100
-│   ├── blynk_integration.h         # Integração Blynk
-│   └── database.h                  # Gerenciamento BD
+│   ├── blynk_integration.h         # Integração com Blynk IoT
+│   └── database.h                  # Gerenciamento de banco de dados
 │
-├── 🔌 hardware/                    # ⚙️ HARDWARE (Esquemas e PCB)
-│   ├── 📄 README.md                # Guia de hardware
-│   ├── schematics/                 # Diagramas esquemáticos
-│   │   └── MAX30100_ESP32.sch
-│   ├── pcb/                        # Layout PCB
-│   │   └── cardio_monitor.brd
-│   └── BOM.txt                     # Lista de componentes
+├── 🌐 Integracao-Web/              # 🟠 WEB (PRIORIDADE 2 - FRONTEND/BACKEND)
+│   ├── 📄 README.md                # Documentação web
+│   ├── backend/                    # Servidor Node.js/Express
+│   │   ├── server.js               # Entry point backend
+│   │   ├── config/
+│   │   ├── routes/
+│   │   ├── models/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   └── package.json
+│   ├── frontend/                   # Cliente React/TypeScript
+│   │   ├── index.html
+│   │   ├── public/
+│   │   ├── src/
+│   │   │   ├── components/
+│   │   │   ├── pages/
+│   │   │   ├── services/
+│   │   │   ├── App.tsx
+│   │   │   └── index.tsx
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   ├── api_docs.md                 # Documentação REST API
+│   ├── docker-compose.yml          # Orquestração containers
+│   └── .env.example                # Template de variáveis
 │
-├── 📚 docs/                        # 📖 DOCUMENTAÇÃO (Guias e referencias)
+├── 📚 docs/                        # 🟡 DOCUMENTAÇÃO (PRIORIDADE 3)
 │   ├── 📄 README.md                # Índice de documentação
-│   ├── setup_guide.md              # Guia de instalação
-│   ├── API_reference.md            # Referência de API
-│   ├── troubleshooting.md          # Solução de problemas
+│   ├── setup_guide.md              # Guia de instalação completa
 │   ├── ARCHITECTURE.md             # Arquitetura do sistema
-│   └── CONTRIBUTING.md             # Guia para contribuidores
+│   ├── API_reference.md            # Referência da API
+│   ├── troubleshooting.md          # Solução de problemas
+│   ├── CONTRIBUTING.md             # Guia para contribuidores
+│   ├── deployment.md               # Guia de deploy
+│   ├── security.md                 # Práticas de segurança
+│   └── CHANGELOG.md                # Histórico de versões
 │
-├── 🧪 tests/                       # ✅ TESTES (Testes unitários)
+├── 🧪 tests/                       # ✅ TESTES (PRIORIDADE 4)
 │   ├── 📄 README.md                # Guia de testes
 │   ├── sensor_tests.cpp            # Testes do sensor
 │   ├── blynk_tests.cpp             # Testes Blynk
-│   └── database_tests.cpp          # Testes BD
+│   ├── database_tests.cpp          # Testes BD
+│   ├── integration_tests.cpp       # Testes integração
+│   ├── CMakeLists.txt              # Build config
+│   └── fixtures/                   # Dados de teste
 │
-├── 🐍 python-test/                 # 🔬 TESTES PYTHON (Scripts auxiliares)
+├── 🔌 hardware/                    # ⚙️ HARDWARE (PRIORIDADE 5)
+│   ├── 📄 README.md                # Guia de hardware
+│   ├── schematics/                 # Diagramas eletrônicos
+│   │   └── MAX30100_ESP32.sch
+│   ├── pcb/                        # Layout PCB
+│   │   └── cardio_monitor.brd
+│   ├── BOM.txt                     # Bill of Materials
+│   ├── pinout.md                   # Pinagem completa
+│   └── calibration.md              # Calibração de sensores
+│
+├── 🐍 python-test/                 # 🔬 TESTES PYTHON (SUPORTE)
 │   ├── 📄 README.md                # Documentação Python
 │   ├── sensor_simulator.py         # Simulador de sensor
 │   ├── mqtt_tester.py              # Teste MQTT
 │   ├── data_analyzer.py            # Análise de dados
-│   └── requirements.txt            # Dependências
+│   ├── requirements.txt            # Dependências Python
+│   └── config/                     # Configurações
 │
-├── .github/                        # ⚙️ CI/CD (GitHub Actions)
-│   ├── 📄 workflows/README.md      # Documentação workflows
-│   └── workflows/
-│       ├── ci.yml                  # Pipeline de CI/CD
-│       ├── tests.yml               # Execução de testes
-│       └── deploy.yml              # Deploy automático
-│
-├── .vscode/                        # 🖥️ IDE CONFIG (VS Code)
-│   └── settings.json
-│
-├── 📋 Artigo_Projeto/              # 📑 PESQUISA (Artigos e referências)
-│   ├── 📄 README.md                # Índice de pesquisa
-│   ├── referencias.md              # Lista de referências
-│   ├── especificacoes/             # Documentos técnicos
-│   └── pesquisa/                   # Artigos científicos
-│
-├── 📊 Produto_Backlog/             # 📋 PLANEJAMENTO (Backlog)
+├── 📋 Produto_Backlog/             # 📊 PLANEJAMENTO (DOCUMENTAÇÃO)
 │   ├── 📄 README.md                # Índice do backlog
 │   ├── user_stories.md             # Histórias de usuário
 │   ├── requisitos.md               # Requisitos funcionais
-│   ├── prototipo/                  # Protótipos
+│   ├── prototipo/                  # Protótipos e wireframes
 │   └── mockups/                    # Mockups de UI
 │
-└── 🌐 Integracao-Web/              # 🔗 WEB (Frontend/Backend)
-    ├── 📄 README.md                # Documentação web
-    ├── backend/                    # Servidor
-    │   ├── server.js
-    │   ├── routes/
-    │   └── models/
-    ├── frontend/                   # Cliente
-    │   ├── index.html
-    │   ├── css/
-    │   ├── js/
-    │   └── components/
-    └── api_docs.md                 # Documentação API
+├── 📑 Artigo_Projeto/              # 📚 PESQUISA (DOCUMENTAÇÃO)
+│   ├── 📄 README.md                # Índice de pesquisa
+│   ├── referencias.md              # Referências bibliográficas
+│   ├── especificacoes/             # Documentos técnicos
+│   │   ├── ESP32_datasheet.pdf
+│   │   ├── MAX30100_datasheet.pdf
+│   │   └── Blynk_protocol.md
+│   └── pesquisa/                   # Artigos científicos
+│
+├── .github/                        # ⚙️ CI/CD (GITHUB ACTIONS)
+│   ├── 📄 workflows/README.md      # Documentação workflows
+│   └── workflows/
+│       ├── ci.yml                  # Pipeline testes
+│       ├── deploy-staging.yml      # Deploy staging
+│       ├── deploy-prod.yml         # Deploy produção
+│       ├── lint.yml                # Linting
+│       └── security-scan.yml       # Scan de segurança
+│
+└── .vscode/                        # 🖥️ IDE CONFIG
+    ├── settings.json
+    ├── extensions.json
+    └── launch.json
 ```
+
+---
 
 ## 🎯 Categorização por Tipo
 
 ### 🔴 DESENVOLVIMENTO (Código)
 ```
-src/                    ← Código Arduino/C++
-tests/                  ← Testes C++
-python-test/            ← Testes Python
-.github/workflows/      ← CI/CD
+src/                    ← Código Arduino/C++ (CRÍTICO)
+Integracao-Web/         ← Frontend + Backend (CRÍTICO)
+tests/                  ← Testes C++ (IMPORTANTE)
+python-test/            ← Testes Python (IMPORTANTE)
+.github/workflows/      ← CI/CD (IMPORTANTE)
 ```
 
-### 📖 DOCUMENTAÇÃO
+### 🟡 DOCUMENTAÇÃO
 ```
-docs/                   ← Guias e referências
-Artigo_Projeto/         ← Pesquisa acadêmica
-Produto_Backlog/        ← Planejamento
+docs/                   ← Guias técnicas (IMPORTANTE)
+Artigo_Projeto/         ← Pesquisa acadêmica (SUPORTE)
+Produto_Backlog/        ← Planejamento (SUPORTE)
+README.md               ← Entry point (CRÍTICO)
 ```
 
 ### ⚙️ CONFIGURAÇÃO
@@ -105,132 +143,279 @@ Produto_Backlog/        ← Planejamento
 .gitignore              ← Git config
 .vscode/                ← IDE config
 init.sh                 ← Setup script
+.env.example            ← Template variáveis
 ```
 
-### 🔗 INTEGRAÇÃO
+### 🔗 HARDWARE
 ```
-Integracao-Web/         ← Web
-hardware/               ← Hardware
+hardware/               ← Schematics e PCB (IMPORTANTE)
 ```
 
-## 📍 Mapa de Localização
+---
 
-| O que procuro | Onde está |
-|---------------|-----------|
-| **Código ESP32** | `src/` |
-| **Esquema eletrônico** | `hardware/schematics/` |
-| **Como instalar** | `docs/setup_guide.md` |
-| **Testes** | `tests/` ou `python-test/` |
-| **Histórias de usuário** | `Produto_Backlog/user_stories.md` |
-| **Dashboard web** | `Integracao-Web/frontend/` |
-| **Servidor backend** | `Integracao-Web/backend/` |
-| **Solução de problemas** | `docs/troubleshooting.md` |
+## 📍 Mapa Rápido de Localização
+
+| O que procuro | Onde está | Prioridade |
+|---------------|-----------|-----------|
+| **Comece aqui** | `README.md` | ⭐⭐⭐ |
+| **Estrutura do projeto** | `STRUCTURE.md` | ⭐⭐⭐ |
+| **Código ESP32** | `src/main.cpp` | ⭐⭐⭐ |
+| **Dashboard Web** | `Integracao-Web/frontend/` | ⭐⭐⭐ |
+| **API Backend** | `Integracao-Web/backend/` | ⭐⭐⭐ |
+| **Como instalar** | `docs/setup_guide.md` | ⭐⭐ |
+| **Arquitetura do sistema** | `docs/ARCHITECTURE.md` | ⭐⭐ |
+| **Guia de deploy** | `docs/deployment.md` | ⭐⭐ |
+| **Esquema eletrônico** | `hardware/schematics/` | ⭐⭐ |
+| **Executar testes** | `tests/` ou `python-test/` | ⭐⭐ |
+| **Solução de problemas** | `docs/troubleshooting.md` | ⭐ |
+| **Histórias de usuário** | `Produto_Backlog/user_stories.md` | ⭐ |
+| **Referências** | `Artigo_Projeto/referencias.md` | ⭐ |
+
+---
 
 ## 🏗️ Arquitetura em Camadas
 
 ```
-┌─────────────────────────────────────┐
-│         🌐 Frontend (Web)           │ ← Integracao-Web/frontend/
-├─────────────────────────────────────┤
-│         🔗 Backend (API)            │ ← Integracao-Web/backend/
-├─────────────────────────────────────┤
-│      ☁️ Blynk IoT Platform          │ ← Integração externa
-├─────────────────────────────────────┤
-│  💾 Database (Firebase/MySQL)       │ ← Backend
-├─────────────────────────────────────┤
-│    📡 ESP32 Microcontroller         │ ← src/
-├─────────────────────────────────────┤
-│      🔌 MAX30100 Sensor             │ ← hardware/
-└─────────────────────────────────────┘
+┌──────────────────────────────────────────────┐
+│         🌐 Frontend (React/TypeScript)       │ ← Integracao-Web/frontend/
+├──────────────────────────────────────────────┤
+│         🔗 Backend API (Node.js/Express)     │ ← Integracao-Web/backend/
+├──────────────────────────────────────────────┤
+│    ☁️ Blynk IoT Platform (Integração)        │ ← Configuração externa
+├──────────────────────────────────────────────┤
+│  💾 Database (Firebase/MySQL)                │ ← Backend config
+├──────────────────────────────────────────────┤
+│    📡 ESP32 Microcontroller (C++)            │ ← src/main.cpp
+├──────────────────────────────────────────────┤
+│  🔌 MAX30100 Sensor (Hardware)               │ ← hardware/
+└──────────────────────────────────────────────┘
 ```
 
-## 🚀 Fluxo de Desenvolvimento
+---
+
+## 🚀 Fluxo de Desenvolvimento & Deployment
+
+### Ciclo de Desenvolvimento
 
 ```
 1. PLANEJAMENTO
    Produto_Backlog/ → Definir requisitos
         ↓
-2. PESQUISA
+2. PESQUISA & ESPECIFICAÇÃO
    Artigo_Projeto/ → Estudar tecnologias
+   docs/ARCHITECTURE.md → Projetar arquitetura
         ↓
 3. DESENVOLVIMENTO
-   src/ → Escrever código
+   src/ → Código ESP32
+   Integracao-Web/ → Frontend + Backend
         ↓
 4. TESTES
-   tests/ → Validar funcionamento
+   tests/ → Testes unitários
+   python-test/ → Testes de integração
         ↓
 5. DOCUMENTAÇÃO
-   docs/ → Documentar
+   docs/ → Documenta mudanças
         ↓
-6. INTEGRAÇÃO
-   Integracao-Web/ → Conectar sistemas
+6. CI/CD & VALIDAÇÃO
+   .github/workflows/ → Testes automáticos
         ↓
-7. CI/CD
-   .github/workflows/ → Deploy automático
+7. DEPLOY
+   docs/deployment.md → Deploy produção
 ```
+
+### Processo de Deploy
+
+```
+LOCAL DEVELOPMENT
+    ↓
+COMMIT & PUSH (main branch)
+    ↓
+GITHUB ACTIONS (CI/CD)
+    ├─ Lint & Format Check
+    ├─ Unit Tests
+    ├─ Build Firmware
+    ├─ Security Scan
+    └─ Build Docker Images
+    ↓
+STAGING ENVIRONMENT
+    ├─ Deploy Backend
+    ├─ Deploy Frontend
+    ├─ Run Integration Tests
+    └─ Manual Testing
+    ↓
+PRODUCTION DEPLOYMENT
+    ├─ Tag Release
+    ├─ Deploy Backend
+    ├─ Deploy Frontend
+    ├─ Update Firmware on Devices
+    └─ Monitor & Log
+```
+
+---
 
 ## 📝 Convenções de Nomenclatura
 
-### Pastas
-- **Principais:** PascalCase ou snake_case
-  - ✅ `Produto_Backlog/` 
-  - ✅ `Integracao-Web/`
-  - ✅ `docs/`
+### Pastas Principais
 
-- **Ocultas:** _snake_case (começam com .)
+- **PascalCase com Hífen:**
+  - ✅ `Integracao-Web/`
+  - ✅ `Artigo_Projeto/`
+  - ✅ `Produto_Backlog/`
+
+- **snake_case:**
+  - ✅ `src/`
+  - ✅ `docs/`
+  - ✅ `tests/`
+  - ✅ `python-test/`
+
+- **Ocultas (começam com .):**
   - `.github/`
   - `.vscode/`
+  - `.gitignore`
 
-### Arquivos
-- **Código:** snake_case.ext
+### Arquivos de Código
+
+- **snake_case.ext:**
   - ✅ `sensor_reader.h`
   - ✅ `blynk_integration.h`
+  - ✅ `database_tests.cpp`
 
-- **Docs:** snake_case.md
+### Documentos
+
+- **snake_case.md:**
   - ✅ `setup_guide.md`
   - ✅ `API_reference.md`
+  - ✅ `troubleshooting.md`
 
-- **Config:** como está
+- **UPPERCASE.md (especiais):**
+  - ✅ `README.md`
+  - ✅ `STRUCTURE.md`
+  - ✅ `ARCHITECTURE.md`
+  - ✅ `CONTRIBUTING.md`
+  - ✅ `CHANGELOG.md`
+
+### Configuração
+
+- **Como está:**
   - ✅ `init.sh`
   - ✅ `.gitignore`
+  - ✅ `CMakeLists.txt`
+  - ✅ `docker-compose.yml`
 
-## 🎨 Emojis Utilizados
+---
 
-| Emoji | Significado |
-|-------|------------|
-| 📄 | Arquivo de documentação |
-| 🗂️ | Estrutura/Organização |
-| 💻 | Código/Desenvolvimento |
-| 🔌 | Hardware |
-| 📚 | Documentação |
-| 🧪 | Testes |
-| 🐍 | Python |
-| ⚙️ | Configuração/CI-CD |
-| 🌐 | Web/Internet |
-| 📋 | Planejamento/Backlog |
-| 📑 | Pesquisa/Artigos |
+## 🎨 Emojis Padrão
+
+| Emoji | Significado | Uso |
+|-------|------------|-----|
+| 📄 | Documentação | Headers de docs |
+| 🗂️ | Estrutura/Organização | Folders e índices |
+| 💻 | Código/Desenvolvimento | Pastas de código |
+| 🔌 | Hardware | Hardware configs |
+| 📚 | Documentação | Pasta docs |
+| 🧪 | Testes | Pasta tests |
+| 🐍 | Python | Scripts Python |
+| ⚙️ | Configuração/CI-CD | Config files |
+| 🌐 | Web/Internet | Web apps |
+| 📋 | Planejamento/Backlog | Planejamento |
+| 📑 | Pesquisa/Artigos | Pesquisa |
+| 🚀 | Deploy/Produção | Deploy info |
+| 📊 | Dashboard/Analytics | Analytics |
+| 🔐 | Segurança | Security |
+
+---
 
 ## ✅ Checklist de Organização
 
 - ✅ Cada pasta principal tem `README.md`
 - ✅ Código separado de documentação
-- ✅ Testes em pasta dedicada
-- ✅ CI/CD configurado
-- ✅ Hardware documentado
-- ✅ Web integrada
-- ✅ Convenções de nome seguidas
+- ✅ Testes em pastas dedicadas
+- ✅ CI/CD configurado e automatizado
+- ✅ Hardware documentado com schematics
+- ✅ Web (frontend + backend) integrada
+- ✅ Convenções de nome consistentes
 - ✅ Emojis para identidade visual
-
-## 🔗 Links Úteis
-
-- Entender código → `src/README.md`
-- Configurar hardware → `hardware/README.md` + `docs/setup_guide.md`
-- Rodar testes → `tests/README.md`
-- Deploy web → `Integracao-Web/README.md`
-- Troubleshooting → `docs/troubleshooting.md`
+- ✅ Prioridades claras para deploy
+- ✅ Documentação de deployment
+- ✅ Guias de troubleshooting
+- ✅ Configurações de segurança
 
 ---
 
-**Status:** ✅ Estrutura Organizacional Completa
-**Última atualização:** Maio 2026
-**Versão:** 1.0
+## 🔗 Links Rápidos de Referência
+
+### Começar
+- ⭐ **Primeiro:** [`README.md`](README.md) - Visão geral e Quick Start
+- ⭐ **Segundo:** [`STRUCTURE.md`](STRUCTURE.md) - Este arquivo
+
+### Desenvolver
+- 💻 **Código:** [`src/README.md`](src/README.md) ou `src/main.cpp`
+- 🌐 **Web:** [`Integracao-Web/README.md`](Integracao-Web/README.md)
+- 🧪 **Testes:** [`tests/README.md`](tests/README.md)
+
+### Documentação Técnica
+- 🏗️ **Arquitetura:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
+- 📡 **API:** [`Integracao-Web/api_docs.md`](Integracao-Web/api_docs.md)
+- 🔐 **Segurança:** [`docs/security.md`](docs/security.md)
+
+### Setup & Deploy
+- ⚙️ **Instalação:** [`docs/setup_guide.md`](docs/setup_guide.md)
+- 🚀 **Deploy:** [`docs/deployment.md`](docs/deployment.md)
+- 🆘 **Problemas:** [`docs/troubleshooting.md`](docs/troubleshooting.md)
+
+### Hardware
+- 🔌 **Hardware:** [`hardware/README.md`](hardware/README.md)
+- 📋 **Componentes:** [`hardware/BOM.txt`](hardware/BOM.txt)
+
+### Planejamento
+- 📊 **Backlog:** [`Produto_Backlog/README.md`](Produto_Backlog/README.md)
+- 📚 **Referências:** [`Artigo_Projeto/referencias.md`](Artigo_Projeto/referencias.md)
+
+---
+
+## 📈 Estatísticas do Projeto
+
+```
+Total de Pastas:        12 principais + subpastas
+Total de Documentos:    25+ arquivos .md
+Linhas de Código:       ~5000+ (estimado)
+Cobertura de Testes:    85%+ (target)
+Linguagens:             C++, TypeScript, Python, Shell
+Frameworks:             Arduino, Express, React, Blynk
+```
+
+---
+
+## 🔄 Atualizações Recentes
+
+### Maio 2026
+
+- ✅ Reorganização completa da estrutura
+- ✅ Prioridades claras para deploy
+- ✅ Documentação aprimorada
+- ✅ Templates para `.env` e config
+- ✅ CI/CD workflows completos
+- ✅ Guia de deployment adicionado
+- ✅ Convenções padronizadas
+
+---
+
+## 📞 Contato & Suporte
+
+**GitHub Issues:** [Abra uma issue](https://github.com/MateusRondon/Monitoramento-Cardiaco/issues)
+
+**Email:** mateus.rondon@email.com
+
+**Documentação:** Consulte [`docs/troubleshooting.md`](docs/troubleshooting.md)
+
+---
+
+<div align="center">
+
+**Última atualização:** 29 Maio 2026  
+**Versão:** 2.0  
+**Status:** ✅ Estrutura Profissional Completa
+
+**[← Voltar para README.md](README.md)**
+
+</div>
