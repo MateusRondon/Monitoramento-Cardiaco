@@ -475,7 +475,6 @@ Abra uma [issue](https://github.com/MateusRondon/Monitoramento-Cardiaco/issues) 
 ### Relatório de Segurança
 
 Não abra issues públicas com vulnerabilidades! 
-Email: [mateus.rondon@email.com](mailto:mateus.rondon@email.com)
 
 ---
 
@@ -495,7 +494,7 @@ Este projeto está sob licença **MIT**. Veja [`LICENSE`](LICENSE) para detalhes
 
 ---
 
-## 🙏 Créditos & Agradecimentos
+##  Referências e Tecnologia
 
 ### Tecnologias
 
@@ -515,21 +514,6 @@ Este projeto está sob licença **MIT**. Veja [`LICENSE`](LICENSE) para detalhes
 **Mateus Rondon**
 
 - 🌐 GitHub: [@MateusRondon](https://github.com/MateusRondon)
-- 💼 LinkedIn: [Seu LinkedIn](https://linkedin.com/in/MateusRondon)
-- 📧 Email: [mateus.rondon@email.com](mailto:mateus.rondon@email.com)
-
----
-
-## ⭐ Apoie o Projeto
-
-Se este projeto foi útil para você:
-
-- ⭐ Dê uma estrela!
-- 🔄 Compartilhe
-- 🐛 Reporte bugs
-- 💡 Sugira features
-- 👥 Contribua
-
 ---
 
 ## 📊 Status & Estatísticas
