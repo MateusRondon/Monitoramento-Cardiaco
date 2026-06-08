@@ -98,10 +98,7 @@ Dashboard Web (Visualização)
 
 ## 📁 Estrutura do Projeto
 
-```
 1. [`STRUCTURE.md`](STRUCTURE.md) - Entenda a estrutura completa
-
-```
 
 ### 📍 Mapa Rápido: O Que Procuro?
 
