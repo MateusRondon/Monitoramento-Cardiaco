@@ -85,9 +85,9 @@ Dashboard Web (Visualização)
 
 | Camada | Tecnologia | Descrição |
 |--------|-----------|-----------|
-| **Hardware** | ESP32, MAX30100 | Microcontrolador + Sensor óptico |
+| **Hardware** | ESP32, AD8232 | Microcontrolador + Sensor Analógico |
 | **Firmware** | C++, Arduino IDE | Código embarcado |
-| **IoT** |  IoT, MQTT | Plataforma cloud e protocolo |
+| **Iot** |  IoT, MQTT | Plataforma Web e protocolo |
 | **Backend** | Node.js/Express | Servidor de API |
 | **Banco de Dados** | Firebase/MySQL | Persistência |
 | **Frontend** | TypeScript, React | Dashboard web |
@@ -99,73 +99,8 @@ Dashboard Web (Visualização)
 ## 📁 Estrutura do Projeto
 
 ```
-Monitoramento-Cardiaco/
-│
-├── 📄 README.md                    # ← Você está aqui
-├── 🗂️ STRUCTURE.md                 # Mapa detalhado de pastas
-├── 📝 .gitignore                   # Git configuração
-├── 🔧 init.sh                      # Script de inicialização
-│
-├── 💻 src/                         # 🔴 CÓDIGO-FONTE (Core)
-│   ├── main.cpp                    # ESP32 - Entry point
-│   ├── sensor_reader.h             # Leitor MAX30100
-│   ├── blynk_integration.h         # Integração Blynk
-│   └── database.h                  # Persistência
-│
-├── 🔌 hardware/                    # ⚙️ HARDWARE (Schematics, PCB)
-│   ├── schematics/                 # Diagramas eletrônicos
-│   ├── pcb/                        # Layout PCB
-│   └── BOM.txt                     # Bill of Materials
-│
-├── 📚 docs/                        # 📖 DOCUMENTAÇÃO
-│   ├── setup_guide.md              # Guia de instalação
-│   ├── API_reference.md            # Referência de API
-│   ├── troubleshooting.md          # Solução de problemas
-│   ├── ARCHITECTURE.md             # Arquitetura do sistema
-│   └── CONTRIBUTING.md             # Guia para contribuidores
-│
-├── 🧪 tests/                       # ✅ TESTES (Unitários)
-│   ├── sensor_tests.cpp            # Testes do sensor
-│   ├── blynk_tests.cpp             # Testes Blynk
-│   └── database_tests.cpp          # Testes BD
-│
-├── 🐍 python-test/                 # 🔬 SCRIPTS PYTHON
-│   ├── sensor_simulator.py         # Simulador de dados
-│   ├── mqtt_tester.py              # Teste MQTT
-│   ├── data_analyzer.py            # Análise de dados
-│   └── requirements.txt            # Dependências
-│
-├── 🌐 Integracao-Web/              # 🔗 WEB (Frontend + Backend)
-│   ├── backend/                    # Servidor Node.js
-│   │   ├── server.js
-│   │   ├── routes/
-│   │   └── models/
-│   ├── frontend/                   # Cliente React
-│   │   ├── index.html
-│   │   ├── css/
-│   │   ├── js/
-│   │   └── components/
-│   └── api_docs.md                 # Documentação API
-│
-├── 📋 Produto_Backlog/             # 📊 PLANEJAMENTO
-│   ├── user_stories.md             # Histórias de usuário
-│   ├── requisitos.md               # Requisitos funcionais
-│   ├── prototipo/                  # Protótipos
-│   └── mockups/                    # Mockups de UI
-│
-├── 📑 Artigo_Projeto/              # 📚 PESQUISA
-│   ├── referencias.md              # Referências bibliográficas
-│   ├── especificacoes/             # Documentos técnicos
-│   └── pesquisa/                   # Artigos e pesquisas
-│
-├── .github/                        # ⚙️ CI/CD (GitHub Actions)
-│   └── workflows/
-│       ├── ci.yml                  # Pipeline testes
-│       ├── deploy.yml              # Deploy produção
-│       └── lint.yml                # Linting
-│
-└── .vscode/                        # 🖥️ IDE CONFIG
-    └── settings.json
+1. [`STRUCTURE.md`](STRUCTURE.md) - Entenda a estrutura completa
+
 ```
 
 ### 📍 Mapa Rápido: O Que Procuro?
