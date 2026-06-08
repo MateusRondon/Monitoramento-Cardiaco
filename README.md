@@ -16,7 +16,7 @@
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Quick Start](#-quick-start)
 - [Guias de Configuração](#-guias-de-configuração)
-- [Roadmap](#-roadmap)
+- [Roadmap](#-roadmap-&-Status)
 - [Documentação](#-documentação)
 - [Contributing](#-contributing)
 - [Suporte](#-suporte)
@@ -238,21 +238,21 @@ Veja: [`Integracao-Web/api_docs.md`](Integracao-Web/api_docs.md)
 
 ### ⏳ Sprint 03 - Testes e Deploy
 
-- [ ] Testes de precisão (equipamento padrão)
-- [ ] Testes de desempenho
-- [ ] Testes de conectividade
-- [ ] Documentação final
-- [ ] Preparação para produção
-- [ ] Deploy em staging
-- [ ] Validação de segurança
+- [x] Testes de precisão (equipamento padrão)
+- [x] Testes de desempenho
+- [x] Testes de conectividade
+- [x] Documentação final
+- [x] Preparação para produção
+- [x] Deploy em staging
+- [x] Validação de segurança
 
 ### 🔮 Sprint 04 - Recursos Avançados
 
-- [ ] Machine Learning para detecção de anomalias
-- [ ] Relatórios PDF automáticos
-- [ ] Integração com EHR (Electronic Health Record)
-- [ ] App mobile nativo
-- [ ] Suporte multi-usuário
+- [x] Machine Learning para detecção de anomalias
+- [x] Relatórios PDF automáticos
+- [x] Integração com EHR (Electronic Health Record)
+- [x] App mobile nativo
+- [x] Suporte multi-usuário
 
 ---
 
@@ -426,14 +426,14 @@ Este projeto está sob licença **MIT**. Veja [`LICENSE`](LICENSE) para detalhes
 
 ### Tecnologias
 
-- [ESP32](https://www.espressif.com/en/products/socs/esp32)
+- [ESP32](https://www.espressif.com/)
 - [Blynk IoT](https://blynk.io/)
 - [Firebase](https://firebase.google.com/)
 - [React](https://react.dev/)
 
 ### Referências
 
-- Veja: [`Artigo_Projeto/referencias.md`](Artigo_Projeto/referencias.md)
+- Veja: [`Artigo_Projeto/referencias.md`](Artigo_Projeto/Mateus.pdf)
 
 ---
 
