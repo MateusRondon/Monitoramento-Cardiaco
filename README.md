@@ -1,4 +1,4 @@
-# 💓 Monitoramento Cardíaco - Sistema IoT com ESP32
+# 💓 Monitoramento Cardíaco - ESP32 e Sensor analógico de Batimento cardíaco AD832
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![ESP32](https://img.shields.io/badge/ESP32-000000?style=flat&logo=espressif&logoColor=white)](https://www.espressif.com/)
@@ -26,7 +26,7 @@
 
 ## 🎯 Visão Geral
 
-Sistema completo e profissional para **monitoramento contínuo em tempo real** de batimentos cardíacos e oxigenação (SpO2) usando IoT, com visualização em dashboard web, alertas inteligentes e histórico de dados integrado.
+Sistema completo e profissional para **monitoramento contínuo em tempo real** de batimentos cardíacos, com visualização em dashboard web, alertas inteligentes e histórico de dados integrado.
 
 **Ideal para:** Telemedicina, monitoramento de pacientes, pesquisa biomédica, aplicações fitness.
 
@@ -35,9 +35,9 @@ Sistema completo e profissional para **monitoramento contínuo em tempo real** d
 ```
 ESP32 (Microcontrolador)
     ↓
-MAX30100 (Sensor Óptico)
+AD8328 (Sensor Analógico)
     ↓
-Blynk IoT (Plataforma Cloud)
+Monitor Cardiaco (Plataforma APP)
     ↓
 Firebase/MySQL (Persistência)
     ↓
@@ -52,18 +52,16 @@ Dashboard Web (Visualização)
 
 - 📊 **Leitura em Tempo Real**
   - BPM (Batimentos Por Minuto)
-  - SpO2 (Saturação de Oxigênio)
   - PPG (Photoplethysmogram)
 
 - 🚨 **Alertas Inteligentes**
   - Bradicardia (BPM < 60)
   - Taquicardia (BPM > 100)
-  - Hipoxemia (SpO2 < 95%)
   - Notificações via SMS, Email, Push
 
 - 📱 **Multi-Plataforma**
   - Dashboard Web responsivo
-  - App Mobile Blynk
+  - App Mobile Monitor Cardiaco
   - API REST para integrações
 
 - 💾 **Persistência de Dados**
@@ -77,7 +75,7 @@ Dashboard Web (Visualização)
   - Drift detection
 
 - 🔐 **Segurança**
-  - Autenticação Blynk
+  - Autenticação Banco de Dados
   - Dados criptografados
   - HTTPS/SSL
 
@@ -89,7 +87,7 @@ Dashboard Web (Visualização)
 |--------|-----------|-----------|
 | **Hardware** | ESP32, MAX30100 | Microcontrolador + Sensor óptico |
 | **Firmware** | C++, Arduino IDE | Código embarcado |
-| **IoT** | Blynk IoT, MQTT | Plataforma cloud e protocolo |
+| **IoT** |  IoT, MQTT | Plataforma cloud e protocolo |
 | **Backend** | Node.js/Express | Servidor de API |
 | **Banco de Dados** | Firebase/MySQL | Persistência |
 | **Frontend** | TypeScript, React | Dashboard web |
@@ -194,7 +192,7 @@ Monitoramento-Cardiaco/
 ```bash
 # Hardware
 - ESP32 Dev Kit
-- MAX30100 Sensor
+- AD8232 Sensor
 - Breadboard + Jumpers
 
 # Software
@@ -228,7 +226,6 @@ chmod +x init.sh
 Crie arquivo `.env` na raiz:
 
 ```env
-BLYNK_AUTH_TOKEN=seu_token_aqui
 WIFI_SSID=seu_wifi
 WIFI_PASSWORD=sua_senha
 FIREBASE_URL=https://seu-projeto.firebaseio.com
@@ -276,7 +273,6 @@ Veja: [`docs/troubleshooting.md`](docs/troubleshooting.md)
 Soluções para:
 - ESP32 não conecta ao WiFi
 - Sensor não lê dados
-- Blynk desconecta
 - Erros de compilação
 - Problemas de comunicação MQTT
 
@@ -300,9 +296,9 @@ Veja: [`Integracao-Web/api_docs.md`](Integracao-Web/api_docs.md)
 - [x] Integração com ESP32
 - [x] Calibração do sensor
 
-### ✅ Sprint 02 - Integração Blynk
+### ✅ Sprint 02 - Integração Web e Banco de Dados
 
-- [x] Configuração Blynk IoT
+- [x] Configuração Web 
 - [x] Exibição de dados em painel
 - [x] Integração com Firebase
 - [x] Alertas personalizados
