@@ -7,8 +7,7 @@ Contribuições são bem-vindas! Siga o processo:
 ### 1. Fork & Clone
 
 ```bash
-git clone https://github.com/SEU_USERNAME/Monitoramento-Cardiaco.git
-cd Monitoramento-Cardiaco
+git clone https://github.com/SEU_USERNAME/Monitoramento-Cardiaco.git cd Monitoramento-Cardiaco
 git checkout -b feature/sua-feature
 ```
 
@@ -29,6 +28,6 @@ git push origin feature/sua-feature
 
 Abra um PR e aguarde review.
 
-Para mais detalhes: [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md)
+Para mais detalhes: [`docs/contribuicao.md`](docs/contribuicao.md)
 
 ---
