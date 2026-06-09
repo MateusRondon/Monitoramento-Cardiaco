@@ -210,7 +210,7 @@ Soluções para:
 
 ### 📡 Referência de API
 
-Veja: [`Integracao-Web/api_docs.md`](Integracao-Web/api_docs.md)
+
 
 - Endpoints REST
 - Formato de requisições
@@ -309,7 +309,7 @@ Push para `main` executa automaticamente:
 
 ---
 
-## 🤝 Contributing
+## 🤝 contribuir
 
 Contribuições são bem-vindas! Siga o processo:
 
