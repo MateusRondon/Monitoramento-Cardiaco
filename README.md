@@ -293,7 +293,7 @@ Push para `main` executa automaticamente:
 1. [`STRUCTURE.md`](STRUCTURE.md) - Entenda a estrutura completa
 2. [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) - Arquitetura técnica
 3. [`docs/API_reference.md`](docs/API_reference.md) - API completa
-4. [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md) - Como contribuir
+4. [`docs/CONTRIBUTING.md`](docs/contribuir.md) - Como contribuir
 
 ### Para Operações
 
